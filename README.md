@@ -124,6 +124,9 @@ http://127.0.0.1:5000
 }
 ```
 
+<img width="812" height="552" alt="image" src="https://github.com/user-attachments/assets/1dea30c1-d1cb-4249-a147-1a8b5ad66dcc" />
+
+
 ## Testing
 
 The API was tested using Postman.
