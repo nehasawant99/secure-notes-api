@@ -1,17 +1,21 @@
 # Secure Notes API
 
-A RESTful Notes API built with Flask and SQLAlchemy that supports creating, reading, updating, and deleting notes. The project demonstrates backend fundamentals including REST APIs, database operations, request validation, and CRUD functionality.
+A RESTful Notes API built with Flask and SQLAlchemy. The project demonstrates backend fundamentals including REST API development, CRUD operations, request validation, database integration, and Docker containerization.
+
+---
 
 ## Features
 
-- Create a note
-- Get all notes
-- Get a note by ID
-- Update a note
-- Delete a note
+- Create, Read, Update and Delete notes (CRUD)
+- RESTful API endpoints
 - JSON request and response handling
-- SQLite database using SQLAlchemy ORM
+- SQLite database with SQLAlchemy ORM
 - Input validation and error handling
+- Environment variable configuration using `.env`
+- Docker container support
+- API testing with Postman
+
+---
 
 ## Tech Stack
 
@@ -19,8 +23,11 @@ A RESTful Notes API built with Flask and SQLAlchemy that supports creating, read
 - Flask
 - SQLAlchemy
 - SQLite
+- Docker
 - Postman
 - Git & GitHub
+
+---
 
 ## Project Structure
 
@@ -32,6 +39,8 @@ secure-notes-api/
 ├── database.py
 ├── models.py
 ├── routes.py
+├── Dockerfile
+├── .dockerignore
 ├── requirements.txt
 ├── .gitignore
 ├── README.md
@@ -40,31 +49,23 @@ secure-notes-api/
 └── screenshots/
 ```
 
+---
+
 ## Installation
 
 Clone the repository.
 
 ```bash
 git clone https://github.com/nehasawant99/secure-notes-api.git
-```
-
-Move into the project.
-
-```bash
 cd secure-notes-api
 ```
 
-Create a virtual environment.
+Create and activate a virtual environment.
 
 ```bash
 python -m venv .venv
-```
 
-Activate the virtual environment.
-
-macOS/Linux
-
-```bash
+# macOS/Linux
 source .venv/bin/activate
 ```
 
@@ -79,6 +80,7 @@ Create a `.env` file.
 ```env
 SECRET_KEY=your_secret_key
 DATABASE_URL=sqlite:///notes.db
+DEBUG=True
 ```
 
 Run the application.
@@ -87,22 +89,48 @@ Run the application.
 python app.py
 ```
 
-The API will be available at:
+API URL
 
 ```text
 http://127.0.0.1:5000
 ```
 
+---
+
+## Run with Docker
+
+Build the Docker image.
+
+```bash
+docker build -t secure-notes-api .
+```
+
+Run the container.
+
+```bash
+docker run --env-file .env -p 5001:5000 secure-notes-api
+```
+
+Docker API URL
+
+```text
+http://localhost:5001
+```
+
+---
+
 ## API Endpoints
 
 | Method | Endpoint | Description |
 |---------|----------|-------------|
-| GET | `/` | Health check |
-| POST | `/notes` | Create a note |
-| GET | `/notes` | Get all notes |
-| GET | `/notes/<id>` | Get a note by ID |
-| PUT | `/notes/<id>` | Update a note |
-| DELETE | `/notes/<id>` | Delete a note |
+| GET | `/` | Health Check |
+| POST | `/notes` | Create Note |
+| GET | `/notes` | Get All Notes |
+| GET | `/notes/<id>` | Get Note by ID |
+| PUT | `/notes/<id>` | Update Note |
+| DELETE | `/notes/<id>` | Delete Note |
+
+---
 
 ## Example Request
 
@@ -110,28 +138,62 @@ http://127.0.0.1:5000
 
 ```json
 {
-    "title": "Docker Notes",
-    "description": "Learn Docker basics"
+  "title": "Docker Notes",
+  "description": "Learn Docker basics"
 }
 ```
+
+---
 
 ## Example Response
 
 ```json
 {
-    "id": 1,
-    "message": "Note created successfully"
+  "message": "Note created successfully",
+  "id": 1
 }
 ```
 
-<img width="812" height="552" alt="image" src="https://github.com/user-attachments/assets/1dea30c1-d1cb-4249-a147-1a8b5ad66dcc" />
-
+---
 
 ## Testing
 
-The API was tested using Postman.
+The API was tested using:
 
-The exported Postman collection is available in the `postman/` directory.
+- Postman
+- curl
+- Docker container
+
+The Postman collection is available in the `postman/` directory.
+
+---
+
+## Screenshots
+
+Add the following screenshots inside the `screenshots/` folder.
+
+- Docker Image Build
+- Running Docker Container
+- API Response (`curl`)
+- Postman CRUD Testing
+- Project Structure
+
+---
+
+## Learning Outcomes
+
+This project helped me practice:
+
+- REST API Development
+- CRUD Operations
+- SQLAlchemy ORM
+- SQLite Integration
+- Environment Variables
+- Docker Containerization
+- API Testing with Postman
+- Git & GitHub Workflow
+
+---
 
 ## License
 
