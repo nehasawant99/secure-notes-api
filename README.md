@@ -29,28 +29,6 @@ A RESTful Notes API built with Flask and SQLAlchemy. The project demonstrates ba
 
 ---
 
-## Project Structure
-
-```text
-secure-notes-api/
-│
-├── app.py
-├── config.py
-├── database.py
-├── models.py
-├── routes.py
-├── Dockerfile
-├── .dockerignore
-├── requirements.txt
-├── .gitignore
-├── README.md
-├── postman/
-│   └── Secure Notes API.postman_collection.json
-└── screenshots/
-```
-
----
-
 ## Installation
 
 Clone the repository.
@@ -154,6 +132,8 @@ http://localhost:5001
 }
 ```
 
+<img width="812" height="552" alt="Screenshot 2026-07-30 at 3 29 55 PM" src="https://github.com/user-attachments/assets/83ee7203-6ec3-4e71-8e13-0a9e4599352e" />
+
 ---
 
 ## Testing
@@ -170,13 +150,35 @@ The Postman collection is available in the `postman/` directory.
 
 ## Screenshots
 
-Add the following screenshots inside the `screenshots/` folder.
+### Docker Image Build & Running Docker Container
 
-- Docker Image Build
-- Running Docker Container
-- API Response (`curl`)
-- Postman CRUD Testing
-- Project Structure
+<a href="./screenshots/running-container.png">
+<img width="1076" height="392" alt="Screenshot 2026-07-30 at 4 44 07 PM" src="https://github.com/user-attachments/assets/2c996fa1-df03-45a1-b60c-d817768b3ddc" />
+</a>
+
+---
+
+### Get Invalid Note
+
+<a href="./screenshots/postman-create-note.png">
+ <img width="799" height="438" alt="Screenshot 2026-07-30 at 4 45 00 PM" src="https://github.com/user-attachments/assets/264fdfaf-338f-4dcc-86eb-28acdbd96cd1" />
+</a>
+
+---
+
+### Get All Notes
+
+<a href="./screenshots/postman-get-notes.png">
+  <img width="799" height="528" alt="Screenshot 2026-07-30 at 4 45 28 PM" src="https://github.com/user-attachments/assets/a24bc948-fa11-4e2b-b3ae-ed3099179eb7" />
+</a>
+
+---
+
+### Docker Desktop
+
+<a href="./screenshots/docker-desktop.png">
+  <img width="1466" height="927" alt="Screenshot 2026-07-30 at 4 46 32 PM" src="https://github.com/user-attachments/assets/3ec7aa10-abeb-411f-b143-fa6faecb3f49" />
+</a>
 
 ---
 
