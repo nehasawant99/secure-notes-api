@@ -6,6 +6,8 @@ from database import db
 # Import models so SQLAlchemy knows about them
 from models import Note
 
+# Import all API routes
+from routes import register_routes
 
 app = Flask(__name__)
 
@@ -14,7 +16,7 @@ app.config.from_object(Config)
 
 # Connect SQLAlchemy to Flask
 db.init_app(app)
-
+register_routes(app)
 
 @app.route("/")
 def home():
