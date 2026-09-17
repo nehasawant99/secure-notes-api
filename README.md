@@ -149,6 +149,7 @@ The Postman collection is available in the `postman/` directory.
 ---
 
 ## Screenshots
+### Architecture Diagram 
 
 ### Docker Image Build & Running Docker Container
 
