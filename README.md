@@ -151,6 +151,8 @@ The Postman collection is available in the `postman/` directory.
 ## Screenshots
 ### Architecture Diagram 
 
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/fcec3b71-d63f-4bd6-8986-e00631c41ec1" />
+
 ### Docker Image Build & Running Docker Container
 
 <a href="./screenshots/running-container.png">
